@@ -20,6 +20,7 @@ namespace localmock
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseUrls("http://+:8888")
                 .Build();
     }
 }
